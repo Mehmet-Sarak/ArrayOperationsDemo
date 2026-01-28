@@ -49,7 +49,9 @@ public class ArrayOperations {
             } else if (command.charAt(0) == 'c'){
                 // TODO
             } else if (command.charAt(0) == 'd'){
-                // TODO
+                Sum sum = new Sum(array);
+                System.out.printf("Sum of elements with odd-numbered indexes: %d\n", sum.getOddSum());
+                System.out.printf("Sum of elements with even-numbered indexes: %d\n", sum.getEvenSum());
             }
         }
         scanner.close();
