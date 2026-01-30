@@ -1,9 +1,9 @@
 public class FindDif{
 
-    public int[] averageDif(int[] arr){
+    public float[] averageDif(int[] arr){
 
-  int sum = 0;
-  int[] result = new int[arr.length];
+  float sum = 0;
+  float[] result = new float[arr.length + 1];
 
 
    for(int i=0; i<arr.length; i++){
@@ -12,7 +12,7 @@ public class FindDif{
 
    }
 
- int average = sum / arr.length;
+ float average = sum / arr.length;
 
   for(int i=0; i<arr.length; i++){
 
@@ -23,7 +23,7 @@ public class FindDif{
     }
   }
 
-
+  result[arr.length] = average;
    return result;
 }
 }

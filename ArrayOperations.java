@@ -20,6 +20,9 @@ public class ArrayOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String command = "a";
+        MinMax minMax = new MinMax();
+        FindDif findDif = new FindDif();
+        float[] diffArray;
         initializeArray(10);
         while (!command.equals("e")){
             System.out.println("(a) Initialize array");
@@ -45,9 +48,13 @@ public class ArrayOperations {
                 initializeArray(scanner.nextInt());
                 scanner.nextLine();
             } else if (command.charAt(0) == 'b'){
-                // TODO
+                System.out.println("Minimum element of array: " + minMax.findMin(array));
+                System.out.println("Maximum element of array: " + minMax.findMax(array));
             } else if (command.charAt(0) == 'c'){
-                // TODO
+                diffArray = findDif.averageDif(array);
+                System.out.printf("Average of array: %.2f\nDifference between elements and array:", diffArray[array.length]);
+                for (int i = 0; i < array.length; i++) System.out.printf(" %.2f", diffArray[i]);
+                System.out.print('\n');
             } else if (command.charAt(0) == 'd'){
                 Sum sum = new Sum(array);
                 System.out.printf("Sum of elements with odd-numbered indexes: %d\n", sum.getOddSum());
